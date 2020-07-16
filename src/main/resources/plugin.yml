@@ -1,0 +1,4 @@
+name: AScoreboard
+version: 1.0
+main: com.arthuramorim.scoreboardf.Scoreboard
+depend: [AFactions]
