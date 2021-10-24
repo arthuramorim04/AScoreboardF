@@ -3,9 +3,11 @@ package com.arthuramorim.scoreboardf;
 
 
 import com.arthuramorim.scoreboardf.hooks.Factions;
+import com.arthuramorim.scoreboardf.hooks.PlayerPoint;
 import com.arthuramorim.scoreboardf.hooks.Vault;
 import com.arthuramorim.scoreboardf.listener.JoinPlayer;
 import com.arthuramorim.scoreboardf.listener.utils.ScoreUpdater;
+import org.black_ixx.playerpoints.PlayerPointsAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,6 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Scoreboard extends JavaPlugin {
     public static Vault Vault;
     public static com.arthuramorim.scoreboardf.hooks.Factions Factions;
+    public static PlayerPoint playerPoint;
     private static Scoreboard plugin;
 
     public Scoreboard() {
@@ -32,11 +35,12 @@ public class Scoreboard extends JavaPlugin {
     private void setupHooks() {
         Vault = new Vault();
         Factions = new Factions();
+        playerPoint = new PlayerPoint(this);
     }
 
     private void registerListeners() {
         PluginManager PM = Bukkit.getPluginManager();
-        PM.registerEvents(new JoinPlayer(), this);
+        PM.registerEvents(new JoinPlayer(this), this);
     }
 
     private void loadScoreTask() {

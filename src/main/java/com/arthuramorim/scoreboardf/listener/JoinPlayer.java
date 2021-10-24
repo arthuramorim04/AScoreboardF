@@ -16,6 +16,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.List;
@@ -24,7 +25,10 @@ import java.util.WeakHashMap;
 public class JoinPlayer implements Listener {
     public static WeakHashMap<Player, ScoreBoardAPI> boards = new WeakHashMap();
 
-    public JoinPlayer() {
+    private Scoreboard plugin;
+
+    public JoinPlayer(Scoreboard plugin) {
+        this.plugin = plugin;
     }
 
     @EventHandler
@@ -92,15 +96,21 @@ public class JoinPlayer implements Listener {
             sb.add("    Online: §e", 4);
             sb.add("  §e" + INFO.getPlayerFactionName(), 5);
             sb.blankLine(6);
-            sb.add("  Coins: ", 7);
-            sb.add("  Poder: §a", 8);
-            sb.blankLine(9);
+            if (Scoreboard.playerPoint.hasPlayerPoint()) {
+                sb.add("  Cash: ", 7);
+            }
+            sb.add("  Coins: ", 8);
+            sb.add("  Poder: §a", 9);
+            sb.blankLine(10);
         } else {
             sb.add("  §7Sem Facção", 2);
             sb.blankLine(3);
-            sb.add("  Coins: ", 4);
-            sb.add("  Poder: §a", 5);
-            sb.blankLine(6);
+            if (Scoreboard.playerPoint.hasPlayerPoint()) {
+                sb.add("  Cash: ", 4);
+            }
+            sb.add("  Coins: ", 5);
+            sb.add("  Poder: §a", 6);
+            sb.blankLine(7);
         }
 
         sb.build();

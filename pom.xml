@@ -67,14 +67,20 @@
         </dependency>
 
         <dependency>
+            <groupId>org.black_ixx.playerpoints</groupId>
+            <artifactId>PlayerPoints</artifactId>
+            <version>1.0</version>
+            <systemPath>${project.basedir}/libs/PlayerPoints.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.massivecore</groupId>
             <artifactId>spigot</artifactId>
             <version>1.0</version>
             <systemPath>${project.basedir}/libs/MassiveCore.jar</systemPath>
             <scope>system</scope>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -6,6 +6,9 @@
 package com.arthuramorim.scoreboardf.listener.utils.api;
 
 import com.arthuramorim.scoreboardf.Scoreboard;
+import com.arthuramorim.scoreboardf.hooks.PlayerPoint;
+import org.black_ixx.playerpoints.PlayerPoints;
+import org.black_ixx.playerpoints.PlayerPointsAPI;
 import org.bukkit.entity.Player;
 
 import java.text.DecimalFormat;
@@ -63,5 +66,13 @@ public class PlayerInfos {
 
     public String getPlayerCoins() {
         return this.FORMATTER.format(Scoreboard.Vault.getPlayerBalance(this.p));
+    }
+
+    public String getPlayerPointsBalance() {
+        PlayerPoints playerPoints = Scoreboard.playerPoint.getPlayerPoints();
+        if (playerPoints != null) {
+            return String.valueOf(playerPoints.getAPI().look(this.p.getUniqueId()));
+        }
+        return "0";
     }
 }

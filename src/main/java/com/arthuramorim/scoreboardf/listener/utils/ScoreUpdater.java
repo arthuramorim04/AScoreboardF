@@ -38,8 +38,9 @@ public class ScoreUpdater extends BukkitRunnable {
                 sb.update(Integer.toString(INFO.getPlayerFactionLands()), 2);
                 sb.update(INFO.getPlayerFactionPower(), 3);
                 sb.update(INFO.getPlayerFactionPlayersOnlines(), 4);
-                sb.update(ChatColor.GREEN + INFO.getPlayerCoins(), 7);
-                sb.update(INFO.getPlayerPower(), 8);
+                sb.update(ChatColor.GREEN + INFO.getPlayerPointsBalance(), 7);
+                sb.update(ChatColor.GREEN + INFO.getPlayerCoins(), 8);
+                sb.update(INFO.getPlayerPower(), 9);
 
 
             } else {
@@ -47,8 +48,9 @@ public class ScoreUpdater extends BukkitRunnable {
                 sb.getScoreboard().getTeam("45").setSuffix("");
                 sb.getScoreboard().getTeam("46").setPrefix("");
                 sb.getScoreboard().getTeam("46").setPrefix("");
-                sb.update(INFO.getPlayerPower(), 5);
-                sb.update(ChatColor.GREEN + INFO.getPlayerCoins(), 4);
+                sb.update(INFO.getPlayerPower(), 6);
+                sb.update(ChatColor.GREEN + INFO.getPlayerCoins(), 5);
+                sb.update(ChatColor.GREEN + INFO.getPlayerPointsBalance(), 4);
             }
 
         }
