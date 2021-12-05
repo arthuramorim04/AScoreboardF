@@ -1,20 +1,19 @@
-package com.arthuramorim.scoreboardf;
+package com.arthuramorim.startscoreboard;
 
 
-
-import com.arthuramorim.scoreboardf.hooks.Factions;
-import com.arthuramorim.scoreboardf.hooks.PlayerPoint;
-import com.arthuramorim.scoreboardf.hooks.Vault;
-import com.arthuramorim.scoreboardf.listener.JoinPlayer;
-import com.arthuramorim.scoreboardf.listener.utils.ScoreUpdater;
-import org.black_ixx.playerpoints.PlayerPointsAPI;
+import com.arthuramorim.startscoreboard.hooks.Factions;
+import com.arthuramorim.startscoreboard.hooks.PlayerPoint;
+import com.arthuramorim.startscoreboard.hooks.Vault;
+import com.arthuramorim.startscoreboard.listener.JoinPlayer;
+import com.arthuramorim.startscoreboard.listener.utils.ScoreUpdater;
 import org.bukkit.Bukkit;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Scoreboard extends JavaPlugin {
+public class Scoreboard extends JavaPlugin implements Listener {
     public static Vault Vault;
-    public static com.arthuramorim.scoreboardf.hooks.Factions Factions;
+    public static com.arthuramorim.startscoreboard.hooks.Factions Factions;
     public static PlayerPoint playerPoint;
     private static Scoreboard plugin;
 
@@ -23,6 +22,10 @@ public class Scoreboard extends JavaPlugin {
 
     public void onEnable() {
         plugin = this;
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null) {
+            getLogger().warning("Could not find PlaceholderAPI! This plugin is required.");
+            Bukkit.getPluginManager().disablePlugin(this);
+        }
         this.setupHooks();
         this.registerListeners();
         this.setupConfiguration();

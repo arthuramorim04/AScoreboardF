@@ -1,4 +1,4 @@
-package com.arthuramorim.scoreboardf.listener;
+package com.arthuramorim.startscoreboard.listener;
 
 import java.util.UUID;
 

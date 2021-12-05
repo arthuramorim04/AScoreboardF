@@ -3,12 +3,11 @@
 // (powered by Fernflower decompiler)
 //
 
-package com.arthuramorim.scoreboardf.listener.utils.api;
+package com.arthuramorim.startscoreboard.listener.utils.api;
 
-import com.arthuramorim.scoreboardf.Scoreboard;
-import com.arthuramorim.scoreboardf.hooks.PlayerPoint;
+import com.arthuramorim.startscoreboard.Scoreboard;
+import com.arthuramorim.startscoreboard.listener.utils.Helper;
 import org.black_ixx.playerpoints.PlayerPoints;
-import org.black_ixx.playerpoints.PlayerPointsAPI;
 import org.bukkit.entity.Player;
 
 import java.text.DecimalFormat;
@@ -65,7 +64,7 @@ public class PlayerInfos {
     }
 
     public String getPlayerCoins() {
-        return this.FORMATTER.format(Scoreboard.Vault.getPlayerBalance(this.p));
+        return Helper.formatBalance(Scoreboard.Vault.getPlayerBalance(this.p));
     }
 
     public String getPlayerPointsBalance() {

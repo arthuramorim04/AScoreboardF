@@ -1,7 +1,7 @@
-package com.arthuramorim.scoreboardf.configuration;
+package com.arthuramorim.startscoreboard.configuration;
 
 
-import com.arthuramorim.scoreboardf.Scoreboard;
+import com.arthuramorim.startscoreboard.Scoreboard;
 
 public class Configuration {
     public static final String MINA_WORLD = Scoreboard.getPlugin().getConfig().getString("MundoMineracao");

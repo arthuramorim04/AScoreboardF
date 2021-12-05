@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package com.arthuramorim.scoreboardf.api;
+package com.arthuramorim.startscoreboard.api;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Preconditions;

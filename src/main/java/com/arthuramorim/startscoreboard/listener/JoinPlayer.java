@@ -1,11 +1,11 @@
-package com.arthuramorim.scoreboardf.listener;
+package com.arthuramorim.startscoreboard.listener;
 
 
-import com.arthuramorim.scoreboardf.Scoreboard;
-import com.arthuramorim.scoreboardf.api.ScoreBoardAPI;
-import com.arthuramorim.scoreboardf.configuration.Configuration;
-import com.arthuramorim.scoreboardf.listener.utils.ScoreUpdater;
-import com.arthuramorim.scoreboardf.listener.utils.api.PlayerInfos;
+import com.arthuramorim.startscoreboard.Scoreboard;
+import com.arthuramorim.startscoreboard.api.ScoreBoardAPI;
+import com.arthuramorim.startscoreboard.configuration.Configuration;
+import com.arthuramorim.startscoreboard.listener.utils.ScoreUpdater;
+import com.arthuramorim.startscoreboard.listener.utils.api.PlayerInfos;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.event.EventFactionsCreate;
 import com.massivecraft.factions.event.EventFactionsDisband;
@@ -16,7 +16,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.List;

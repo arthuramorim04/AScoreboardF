@@ -1,6 +1,6 @@
-package com.arthuramorim.scoreboardf.hooks;
+package com.arthuramorim.startscoreboard.hooks;
 
-import com.arthuramorim.scoreboardf.configuration.Configuration;
+import com.arthuramorim.startscoreboard.configuration.Configuration;
 import com.massivecraft.factions.entity.BoardColl;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.MPlayer;

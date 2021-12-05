@@ -1,6 +1,6 @@
-package com.arthuramorim.scoreboardf.hooks;
+package com.arthuramorim.startscoreboard.hooks;
 
-import com.arthuramorim.scoreboardf.Scoreboard;
+import com.arthuramorim.startscoreboard.Scoreboard;
 import org.black_ixx.playerpoints.PlayerPoints;
 import org.bukkit.plugin.Plugin;
 
